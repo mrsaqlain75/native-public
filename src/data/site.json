@@ -1,0 +1,16 @@
+{
+  "name": "Native Restaurant & Camping",
+  "tagline": "Good food, great views, unforgettable nights by the fire.",
+  "phone": "+92-000-0000000",
+  "whatsapp": "920000000000",
+  "email": "hello@example.com",
+  "address": "Street address, City, Country",
+  "hours": [
+    { "days": "Monday – Sunday", "time": "10:00 AM – 11:00 PM" }
+  ],
+  "socials": {
+    "facebook": "",
+    "instagram": "",
+    "youtube": ""
+  }
+}
