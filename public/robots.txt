@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://native-public.vercel.app/sitemap-index.xml
+
+<!-- TODO: keep this URL in sync with `site` in astro.config.mjs -->

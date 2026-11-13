@@ -1,0 +1,27 @@
+---
+import images from "../data/images.json";
+
+interface Props {
+  kicker: string;
+  title: string;
+  lede?: string;
+  image?: { src: string; alt: string };
+}
+const { kicker, title, lede, image = images.pages.camping } = Astro.props;
+---
+
+<section class="relative flex min-h-[62vh] items-end text-bone">
+  <img
+    src={image.src}
+    alt={image.alt}
+    class="absolute inset-0 h-full w-full object-cover"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div class="absolute inset-0 bg-ink/55"></div>
+  <div class="container-site relative pb-14 pt-40" data-motion-group>
+    <p class="font-body text-sm font-semibold text-clay">{kicker}</p>
+    <h1 class="mt-3 max-w-3xl font-display text-4xl leading-[1.05] md:text-6xl">{title}</h1>
+    {lede && <p class="mt-4 max-w-xl text-bone/85">{lede}</p>}
+  </div>
+</section>

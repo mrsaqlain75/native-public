@@ -1,8 +1,52 @@
 @import "tailwindcss";
 
-/* Public site theme — intentionally NOT the admin dashboard palette.
-   Final look/feel is pending user direction. */
-:root {
-  --color-bg: #ffffff;
-  --color-text: #1a1a1a;
+@theme {
+  /* Palette — see DESIGN.md. One base, one ink, one accent. */
+  --color-bone: #f4ede3;
+  --color-sand: #e7dcc8;
+  --color-ink: #221a12;
+  --color-ink-soft: #5c4f40;
+  --color-clay: #a44a24;
+  --color-clay-deep: #7c3519;
+
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Manrope", "Segoe UI", Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-bone font-body text-ink antialiased;
+    line-height: 1.7;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: var(--color-clay);
+    color: var(--color-bone);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-clay);
+    outline-offset: 3px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Photos get a warm fallback surface while loading or if a URL dies. */
+  img {
+    background-color: var(--color-sand);
+  }
+}
+
+@utility container-site {
+  @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
 }

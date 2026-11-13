@@ -1,0 +1,110 @@
+---
+import site from "../data/site.json";
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/menu/", label: "Menu" },
+  { href: "/camping/", label: "Camping" },
+  { href: "/gallery/", label: "Gallery" },
+  { href: "/about/", label: "About" },
+  { href: "/contact/", label: "Contact" },
+];
+const { pathname } = Astro.url;
+const isActive = (href: string) =>
+  href === "/" ? pathname === "/" : pathname.startsWith(href.replace(/\/$/, ""));
+---
+
+<header id="site-nav" class="fixed inset-x-0 top-0 z-50 text-bone transition-colors duration-300">
+  <div class="container-site flex h-16 items-center justify-between gap-6 md:h-20">
+    <a href="/" class="font-display text-lg tracking-tight md:text-xl" aria-label={`${site.name}, home`}>
+      {site.shortName}
+      <span class="text-[0.6em] align-super">· restaurant &amp; camping</span>
+    </a>
+
+    <nav class="hidden items-center gap-7 text-sm font-medium md:flex" aria-label="Main">
+      {links.map((l) => (
+        <a
+          href={l.href}
+          aria-current={isActive(l.href) ? "page" : undefined}
+          class:list={[
+            "border-b border-transparent py-1 transition-colors hover:border-current",
+            isActive(l.href) ? "border-clay text-clay" : "",
+          ]}
+        >
+          {l.label}
+        </a>
+      ))}
+      <a
+        href={`tel:${site.phoneHref}`}
+        class="rounded-none border border-bone/70 px-4 py-2 transition-colors hover:bg-bone hover:text-ink"
+      >
+        {site.phoneDisplay}
+      </a>
+    </nav>
+
+    <button
+      id="menu-toggle"
+      class="flex h-11 w-11 items-center justify-center md:hidden"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Open menu"
+    >
+      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" id="icon-open" />
+        <path d="M6 6l12 12M18 6L6 18" id="icon-close" class="hidden" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" hidden class="bg-ink text-bone md:hidden">
+    <nav class="container-site flex flex-col py-6" aria-label="Mobile">
+      {links.map((l) => (
+        <a
+          href={l.href}
+          aria-current={isActive(l.href) ? "page" : undefined}
+          class:list={[
+            "border-b border-bone/10 py-4 font-display text-2xl",
+            isActive(l.href) ? "text-clay" : "",
+          ]}
+        >
+          {l.label}
+        </a>
+      ))}
+      <a href={`tel:${site.phoneHref}`} class="py-5 text-lg font-medium text-clay">
+        Call {site.phoneDisplay}
+      </a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  #site-nav[data-scrolled="true"] {
+    background: var(--color-bone);
+    color: var(--color-ink);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-ink) 15%, transparent);
+  }
+</style>
+
+<script>
+  const nav = document.getElementById("site-nav")!;
+  const toggle = document.getElementById("menu-toggle")!;
+  const panel = document.getElementById("mobile-menu")!;
+  const iconOpen = document.getElementById("icon-open")!;
+  const iconClose = document.getElementById("icon-close")!;
+
+  const onScroll = () => {
+    nav.dataset.scrolled = String(window.scrollY > 24);
+  };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  toggle.addEventListener("click", () => {
+    const open = panel.hidden;
+    panel.hidden = !open;
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    iconOpen.classList.toggle("hidden", open);
+    iconClose.classList.toggle("hidden", !open);
+    nav.dataset.scrolled = String(open || window.scrollY > 24);
+  });
+</script>

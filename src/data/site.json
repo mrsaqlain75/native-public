@@ -1,16 +1,21 @@
 {
   "name": "Native Restaurant & Camping",
-  "tagline": "Good food, great views, unforgettable nights by the fire.",
-  "phone": "+92-000-0000000",
-  "whatsapp": "920000000000",
-  "email": "hello@example.com",
-  "address": "Street address, City, Country",
+  "shortName": "Native",
+  "tagline": "A kitchen and a campsite on the edge of the pines.",
+  "phoneDisplay": "+92 300 000 0000",
+  "phoneHref": "+923000000000",
+  "whatsappNumber": "923000000000",
+  "email": "hello@nativerestaurant.example",
+  "address": "Village Road, Hillside, District (replace with real address)",
+  "mapsQuery": "Native Restaurant and Camping, Hillside",
   "hours": [
-    { "days": "Monday – Sunday", "time": "10:00 AM – 11:00 PM" }
+    { "days": "Monday to Thursday", "time": "10:00 am to 10:00 pm" },
+    { "days": "Friday to Sunday", "time": "10:00 am to midnight" },
+    { "days": "Campsite check-in", "time": "3:00 pm, checkout by 11:00 am" }
   ],
   "socials": {
-    "facebook": "",
     "instagram": "",
+    "facebook": "",
     "youtube": ""
   }
 }

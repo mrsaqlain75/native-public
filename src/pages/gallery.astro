@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHead from "../components/PageHead.astro";
+import images from "../data/images.json";
+
+const description = "Photographs of Native: the kitchen, the fire, the meadow and the nights. The place as it actually looks.";
+
+// The page-head photo already shows above; keep it out of the grid.
+const photos = images.galleryPage.filter((g) => g.src !== images.pages.camping.src);
+---
+
+<Layout title="Gallery" description={description} image={images.galleryPage[0].src}>
+  <PageHead
+    kicker="The gallery"
+    title="No wide angles. This is how the place looks."
+    lede="Ten photographs, taken across a season. If you visit and take a better one, send it to us."
+    image={images.pages.camping}
+  />
+
+  <section class="container-site py-16 md:py-24">
+    <div class="columns-1 gap-6 sm:columns-2 lg:columns-3">
+      {photos.map((img) => (
+        <figure class="mb-6 break-inside-avoid">
+          <img src={img.src} alt={img.alt} class="w-full object-cover" loading="lazy" />
+          <figcaption class="mt-2 text-sm text-ink-soft">{img.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+</Layout>

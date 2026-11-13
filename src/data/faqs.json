@@ -1,0 +1,58 @@
+{
+  "home": [
+    {
+      "q": "Do we need a reservation for dinner?",
+      "a": "Weekends, yes. We are a small room and the fire seats fill first. Call or WhatsApp the number below and we will hold a table for fifteen minutes past your time."
+    },
+    {
+      "q": "Can children stay overnight at the campsite?",
+      "a": "They can, and they usually love it. The meadow is fenced and staff are on site all night. Just tell us the ages when you book so we can pitch you close to the washrooms."
+    },
+    {
+      "q": "Where exactly are you, and is the road paved?",
+      "a": "Full directions are on the contact page. The last stretch is gravel but any sedan manages it dry; in monsoon weeks, message us first and we will tell you the current state of the road."
+    }
+  ],
+  "menu": [
+    {
+      "q": "Do you have vegetarian dishes?",
+      "a": "More than the menu suggests. The daal, the rice, the tandoori breads, and most of the starters are vegetarian, and the kitchen will build a vegetable plate from whatever came in that morning. Just ask."
+    },
+    {
+      "q": "How spicy is the food, really?",
+      "a": "Karahi and tikka come medium by default. We keep the chilli paste on the side for everything, so you can take it hotter or milder without the dish losing its base."
+    },
+    {
+      "q": "Can we order for takeaway?",
+      "a": "Yes, over the phone. Everything travels well except the trout and the fire-roasted sweet potato, which we will honestly talk you out of."
+    }
+  ],
+  "camping": [
+    {
+      "q": "How do we book a campsite?",
+      "a": "Message us on WhatsApp with your dates and headcount. We confirm within the day, and payment happens on arrival. For weekends in June to August, book at least a week ahead."
+    },
+    {
+      "q": "Is the campsite safe?",
+      "a": "There is one gate, it is closed at eleven, and someone is awake at the kitchen tent all night. Valuables can be locked in the kitchen safe if you would rather not keep them in the tent."
+    },
+    {
+      "q": "What are the washrooms like?",
+      "a": "A proper block with flush toilets, running water and gas hot water from six in the morning. Not luxury, but clean, and checked twice a day."
+    }
+  ],
+  "contact": [
+    {
+      "q": "What is the fastest way to reach you?",
+      "a": "WhatsApp. The kitchen is loud between one and three, and again from eight, so calls get missed. A WhatsApp message gets answered within the hour during opening times."
+    },
+    {
+      "q": "Do you host private events?",
+      "a": "Birthday dinners, small weddings and company off-sites, yes, up to about forty people. Write to us with the date, the headcount and whether you want dinner, camping or both."
+    },
+    {
+      "q": "Are you open in winter?",
+      "a": "The kitchen stays open year round, and winter is honestly our best campfire season. The stream trout disappears from the menu and the blankets get thicker."
+    }
+  ]
+}

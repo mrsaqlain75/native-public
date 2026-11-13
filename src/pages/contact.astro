@@ -1,0 +1,111 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHead from "../components/PageHead.astro";
+import FaqSection from "../components/FaqSection.astro";
+import site from "../data/site.json";
+import faqs from "../data/faqs.json";
+import { waLink } from "../lib/links";
+
+const description = "Find Native: phone, WhatsApp, email, opening hours, directions and a map. WhatsApp gets the fastest reply during opening hours.";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    name: site.name,
+    description,
+    telephone: site.phoneHref,
+    email: site.email,
+    servesCuisine: ["Pakistani", "Barbecue", "Mountain"],
+    priceRange: "Rs 300 to Rs 2,000",
+    acceptsReservations: "True",
+    address: { "@type": "PostalAddress", streetAddress: site.address },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.contact.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+
+const methods = [
+  {
+    label: "Call",
+    value: site.phoneDisplay,
+    href: `tel:${site.phoneHref}`,
+    note: "Answered during opening hours. The kitchen is loud between 1 and 3 pm, and again after 8.",
+  },
+  {
+    label: "WhatsApp",
+    value: site.phoneDisplay,
+    href: waLink(site.whatsappNumber, "Hi Native!"),
+    note: "Fastest reply, usually within the hour. Send dates and headcount for camping.",
+  },
+  {
+    label: "Email",
+    value: site.email,
+    href: `mailto:${site.email}`,
+    note: "For events and anything that needs a proper reply. We answer within a day.",
+  },
+];
+---
+
+<Layout title="Contact and directions" description={description} schema={schema}>
+  <PageHead
+    kicker="Contact"
+    title="Message first. The phone stays busy at dinner."
+    lede="Reservations, camping bookings, events and directions to the gate."
+  />
+
+  <section class="container-site py-16 md:py-24">
+    <ul class="border-t border-ink/15">
+      {methods.map((m) => (
+        <li class="grid gap-2 border-b border-ink/15 py-6 md:grid-cols-12 md:items-baseline md:gap-8">
+          <h2 class="font-display text-2xl md:col-span-3">{m.label}</h2>
+          <a href={m.href} class="font-display text-xl text-clay underline decoration-2 underline-offset-4 transition-colors hover:text-clay-deep md:col-span-4">
+            {m.value}
+          </a>
+          <p class="text-sm text-ink-soft md:col-span-5">{m.note}</p>
+        </li>
+      ))}
+      <li class="grid gap-2 border-b border-ink/15 py-6 md:grid-cols-12 md:gap-8">
+        <h2 class="font-display text-2xl md:col-span-3">Address</h2>
+        <p class="text-ink-soft md:col-span-9">{site.address}</p>
+      </li>
+    </ul>
+
+    <div class="mt-14 grid gap-10 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <h2 class="text-sm font-semibold text-clay">Opening hours</h2>
+        <ul class="mt-5 border-t border-ink/15 text-sm">
+          {site.hours.map((h) => (
+            <li class="flex items-baseline justify-between gap-4 border-b border-ink/15 py-4">
+              <span class="font-display text-base">{h.days}</span>
+              <span class="text-ink-soft">{h.time}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="md:col-span-7">
+        <iframe
+          title={`Map showing ${site.name}`}
+          class="min-h-96 w-full border border-ink/15"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src={`https://www.google.com/maps?q=${encodeURIComponent(site.mapsQuery)}&output=embed`}></iframe>
+        <a
+          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.mapsQuery)}`}
+          class="mt-4 inline-block text-sm font-semibold text-clay underline decoration-2 underline-offset-4 hover:text-clay-deep"
+        >
+          Open in Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <FaqSection faqs={faqs.contact} />
+</Layout>

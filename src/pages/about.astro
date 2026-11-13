@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHead from "../components/PageHead.astro";
+import site from "../data/site.json";
+import images from "../data/images.json";
+
+const description = "The story of Native: a family kitchen on an orchard hillside that grew a fire pit, then a room, then a meadow of tents.";
+
+const values = [
+  {
+    name: "Fire first",
+    text: "Almost everything on the menu meets wood, coal or embers before it meets a plate. It is slower, and it tastes like it.",
+  },
+  {
+    name: "Short menu",
+    text: "Fewer dishes, cooked properly. What arrives in the morning decides what the kitchen offers at night.",
+  },
+  {
+    name: "Take your time",
+    text: "Tables are not turned on a schedule. Order the kehwa pot and stay till the fire burns low.",
+  },
+  {
+    name: "Leave the meadow better",
+    text: "The campsite carries out everything it carries in. The pines were here first.",
+  },
+];
+---
+
+<Layout title="About" description={description} image={images.pages.about.src}>
+  <PageHead
+    kicker="About"
+    title="It began with a fire pit on an orchard hillside."
+    image={images.pages.about}
+  />
+
+  <section class="container-site py-16 md:py-24">
+    <div class="grid gap-12 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <p class="font-display text-2xl leading-snug md:text-3xl">
+          “We never planned a restaurant. The food was too good to eat alone, and the meadow was too pretty to sleep in the house.”
+        </p>
+        <p class="mt-4 text-sm text-ink-soft">The family, on how Native started</p>
+      </div>
+      <div class="md:col-span-6 md:col-start-7">
+        <p class="text-ink-soft">
+          For years the family orchard was where relatives stopped on the way north. Someone lit a fire,
+          someone else brought a karahi out of the kitchen, and the visit turned into dinner under the
+          pines. Friends asked to come back. Friends of friends asked to camp.
+        </p>
+        <p class="mt-4 text-ink-soft">
+          The room came later, built low so it would not argue with the trees. The kitchen stayed the
+          same: a short menu, a wood fire, and no rush. The meadow holds a handful of tents now, and
+          the gate closes at eleven, but the evenings work the way they always did. Eat slow, sit
+          closer to the fire, and go to bed warm.
+        </p>
+        <p class="mt-4 text-ink-soft">
+          {site.name} feeds and sleeps anyone who makes the climb: families on the weekend, trekkers on
+          their way up the valley, and the occasional guest who only meant to stay for lunch.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-site pb-16 md:pb-24">
+    <h2 class="text-sm font-semibold text-clay">What we hold to</h2>
+    <ul class="mt-5 border-t border-ink/15">
+      {values.map((v) => (
+        <li class="grid gap-2 border-b border-ink/15 py-6 md:grid-cols-12 md:gap-8">
+          <h3 class="font-display text-xl md:col-span-4">{v.name}</h3>
+          <p class="text-ink-soft md:col-span-8">{v.text}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="container-site pb-20 md:pb-28">
+    <div class="flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-ink/15 pt-8">
+      <a
+        href={`tel:${site.phoneHref}`}
+        class="border border-ink bg-ink px-6 py-3 text-sm font-semibold text-bone transition-colors hover:bg-transparent hover:text-ink"
+      >
+        Call us · {site.phoneDisplay}
+      </a>
+      <a href="/contact/" class="text-sm font-semibold underline decoration-clay decoration-2 underline-offset-4 hover:text-clay">
+        Directions and opening hours
+      </a>
+    </div>
+  </section>
+</Layout>

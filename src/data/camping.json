@@ -1,0 +1,54 @@
+{
+  "note": "Package names, prices and inclusions are placeholders. Replace with the real ones.",
+  "packages": [
+    {
+      "name": "The two-person tent",
+      "price": "Rs 4,500",
+      "unit": "per night",
+      "capacity": "2 guests",
+      "includes": ["Bell tent with real beds", "Bonfire and firewood", "Morning kehwa", "Washroom block, 40 m away"]
+    },
+    {
+      "name": "The family camp",
+      "price": "Rs 8,500",
+      "unit": "per night",
+      "capacity": "4 to 6 guests",
+      "includes": ["Two connected tents", "Private fire pit and grill grate", "Breakfast included", "Washroom block, 40 m away"]
+    },
+    {
+      "name": "Bring your own tent",
+      "price": "Rs 1,200",
+      "unit": "per person, per night",
+      "capacity": "any",
+      "includes": ["Pitch on the meadow", "Fire pit, shared", "Washroom block", "Hot water from 6 am"]
+    }
+  ],
+  "amenities": [
+    "Clean washroom block with hot water",
+    "Bonfire wood, sold by the basket",
+    "Barbecue grates to borrow",
+    "Phone charging at the kitchen tent",
+    "Covered dining area for rain",
+    "Parking inside the gate",
+    "Staff on site through the night",
+    "First aid kit at the kitchen"
+  ],
+  "goodToKnow": [
+    {
+      "q": "What should we bring?",
+      "a": "Warm layers, even in June. Nights drop close to freezing much of the year. We provide bedding, firewood and torches; you bring clothes, toiletries and anything you cannot sleep without."
+    },
+    {
+      "q": "Can we play music or bring speakers?",
+      "a": "Quiet acoustic around your own fire is fine. Amplified speakers are not. The meadow carries sound further than you think."
+    },
+    {
+      "q": "Is outside food allowed at the campsite?",
+      "a": "Snacks and soft drinks, yes. Cooked food and shisha, no. The kitchen is there for a reason, and the firewood pile is not for shashlik."
+    },
+    {
+      "q": "What happens when it rains?",
+      "a": "The dining area is covered and the tents hold a proper shower. If the forecast turns genuinely bad before you arrive, we move your booking once, free, to the next open night."
+    }
+  ]
+}
