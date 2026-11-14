@@ -17,10 +17,12 @@ const isActive = (href: string) =>
 <header id="site-nav" class="fixed inset-x-0 top-0 z-50 text-bone transition-colors duration-300">
   <div class="container-site flex h-16 items-center justify-between gap-6 md:h-20">
     <a href="/" class="flex items-center gap-3" aria-label={`${site.name}, home`}>
-      <img src="/favicon.ico" alt="" class="h-9 w-9 md:h-10 md:w-10" width="40" height="40" />
-      <span class="font-display text-lg tracking-tight md:text-xl">
-        {site.shortName}
-        <span class="hidden text-[0.65em] align-super sm:inline">· restaurant &amp; camping</span>
+      <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bone ring-1 ring-ink/10 md:h-11 md:w-11">
+        <img src="/logo.png" alt="" class="h-7 w-7 object-contain md:h-8 md:w-8" width="32" height="32" />
+      </span>
+      <span class="flex flex-col leading-none">
+        <span class="font-display text-lg tracking-tight md:text-xl">Native</span>
+        <span class="mt-1 font-body text-[10px] font-semibold tracking-wide md:text-[11px]">Resort &amp; Restaurant</span>
       </span>
     </a>
 

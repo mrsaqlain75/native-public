@@ -24,8 +24,13 @@ const contactRows = [
       <!-- Brand -->
       <div class="md:col-span-5">
         <a href="/" class="inline-flex items-center gap-4" aria-label={`${site.name}, home`}>
-          <img src="/favicon.ico" alt="" class="h-12 w-12" width="48" height="48" />
-          <span class="font-display text-2xl tracking-tight md:text-3xl">{site.shortName}</span>
+          <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-bone">
+            <img src="/logo.png" alt="" class="h-10 w-10 object-contain" width="40" height="40" />
+          </span>
+          <span class="flex flex-col leading-none">
+            <span class="font-display text-2xl tracking-tight md:text-3xl">Native</span>
+            <span class="mt-1.5 font-body text-xs font-semibold tracking-wide text-bone/70">Resort &amp; Restaurant</span>
+          </span>
         </a>
         <p class="mt-5 max-w-sm text-sm leading-relaxed text-bone/70">{site.tagline}</p>
         <p class="mt-4 max-w-sm text-sm text-bone/70">{site.address}</p>
