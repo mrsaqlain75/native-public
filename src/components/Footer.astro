@@ -1,6 +1,7 @@
 ---
 import site from "../data/site.json";
 import { waLink } from "../lib/links";
+import LogoMark from "./LogoMark.astro";
 
 const year = new Date().getFullYear();
 const nav = [
@@ -24,9 +25,7 @@ const contactRows = [
       <!-- Brand -->
       <div class="md:col-span-5">
         <a href="/" class="inline-flex items-center gap-4" aria-label={`${site.name}, home`}>
-          <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-bone">
-            <img src="/logo.png" alt="" class="h-10 w-10 object-contain" width="40" height="40" />
-          </span>
+          <LogoMark class="h-10 w-auto md:h-12" />
           <span class="flex flex-col leading-none">
             <span class="font-display text-2xl tracking-tight md:text-3xl">Native</span>
             <span class="mt-1.5 font-body text-xs font-semibold tracking-wide text-bone/70">Resort &amp; Restaurant</span>
