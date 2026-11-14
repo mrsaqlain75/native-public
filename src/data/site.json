@@ -9,9 +9,7 @@
   "address": "Village Road, Hillside, District (replace with real address)",
   "mapsQuery": "Native Restaurant and Camping, Hillside",
   "hours": [
-    { "days": "Monday to Thursday", "time": "10:00 am to 10:00 pm" },
-    { "days": "Friday to Sunday", "time": "10:00 am to midnight" },
-    { "days": "Campsite check-in", "time": "3:00 pm, checkout by 11:00 am" }
+    { "days": "Restaurant and campsite", "time": "Open 24 hours, 7 days a week" }
   ],
   "socials": {
     "instagram": "",

@@ -37,13 +37,13 @@ const methods = [
     label: "Call",
     value: site.phoneDisplay,
     href: `tel:${site.phoneHref}`,
-    note: "Answered during opening hours. The kitchen is loud between 1 and 3 pm, and again after 8.",
+    note: "Answered any time of day. The kitchen is loud between 1 and 3 pm, and again after 8, so WhatsApp gets through faster.",
   },
   {
     label: "WhatsApp",
     value: site.phoneDisplay,
     href: waLink(site.whatsappNumber, "Hi Native!"),
-    note: "Fastest reply, usually within the hour. Send dates and headcount for camping.",
+    note: "Fastest reply, usually within the hour, around the clock. Send dates and headcount for camping.",
   },
   {
     label: "Email",
@@ -56,9 +56,8 @@ const methods = [
 
 <Layout title="Contact and directions" description={description} schema={schema}>
   <PageHead
-    kicker="Contact"
-    title="Message first. The phone stays busy at dinner."
-    lede="Reservations, camping bookings, events and directions to the gate."
+    title="Contact Us"
+    lede="Reservations, camping bookings, events and directions to the gate. Open 24 hours, 7 days a week."
   />
 
   <section class="container-site py-16 md:py-24">
@@ -80,14 +79,16 @@ const methods = [
 
     <div class="mt-14 grid gap-10 md:grid-cols-12">
       <div class="md:col-span-5">
-        <h2 class="text-sm font-semibold text-clay">Opening hours</h2>
+        <h2 class="font-display text-2xl md:text-3xl">Hours</h2>
         <ul class="mt-5 border-t border-ink/15 text-sm">
-          {site.hours.map((h) => (
-            <li class="flex items-baseline justify-between gap-4 border-b border-ink/15 py-4">
-              <span class="font-display text-base">{h.days}</span>
-              <span class="text-ink-soft">{h.time}</span>
-            </li>
-          ))}
+          <li class="flex items-baseline justify-between gap-4 border-b border-ink/15 py-4">
+            <span class="font-display text-base">Restaurant and campsite</span>
+            <span class="text-ink-soft">Open 24 hours, 7 days a week</span>
+          </li>
+          <li class="flex items-baseline justify-between gap-4 border-b border-ink/15 py-4">
+            <span class="font-display text-base">Campsite check-in</span>
+            <span class="text-ink-soft">3:00 pm, checkout by 11:00 am</span>
+          </li>
         </ul>
       </div>
       <div class="md:col-span-7">

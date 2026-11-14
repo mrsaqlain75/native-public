@@ -1,25 +1,29 @@
 {
-  "note": "Prices are placeholders. Replace with real items and prices, keeping the same shape.",
+  "note": "Prices and photos are placeholders. Replace with real items, prices and the business's own food photography, keeping the same shape.",
   "signature": [
     {
       "name": "Slow-cooked lamb karahi",
       "description": "Two hours on the wood fire, cooked in its own fat with green chillies and no water.",
-      "price": "Rs 1,850"
+      "price": "Rs 1,850",
+      "img": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=80"
     },
     {
       "name": "Chapli kebab with mountain tomato",
       "description": "Flat, seared on cast iron, finished with pomegranate seed.",
-      "price": "Rs 650"
+      "price": "Rs 650",
+      "img": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80"
     },
     {
       "name": "Oak-smoked chicken tikka",
       "description": "Marinated overnight in yoghurt and Kashmiri chilli, smoked over oak embers.",
-      "price": "Rs 950"
+      "price": "Rs 950",
+      "img": "https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=900&q=80"
     },
     {
       "name": "Campfire daal with ghee tadka",
       "description": "The pot sits by the fire through the evening. Comes with tandoori roti.",
-      "price": "Rs 480"
+      "price": "Rs 480",
+      "img": "https://images.unsplash.com/photo-1585937421612-70a00882f4e8?auto=format&fit=crop&w=900&q=80"
     }
   ],
   "categories": [
@@ -29,22 +33,26 @@
         {
           "name": "Sesame, chilli and peanut salad",
           "description": "Raw mountain vegetables, crushed peanut dressing.",
-          "price": "Rs 420"
+          "price": "Rs 420",
+          "img": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80"
         },
         {
           "name": "Chicken seekh, half portion",
           "description": "Minced on site, grilled to order over coals.",
-          "price": "Rs 520"
+          "price": "Rs 520",
+          "img": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80"
         },
         {
           "name": "Wood-oven dinner rolls and cultured butter",
           "description": "Baked in the tandoor's corner, four to a basket.",
-          "price": "Rs 260"
+          "price": "Rs 260",
+          "img": "https://images.unsplash.com/photo-1509440159596-02490c8d5966?auto=format&fit=crop&w=900&q=80"
         },
         {
           "name": "Tomato and burnet-mint shorba",
           "description": "A thin, sharp broth, poured at the table.",
-          "price": "Rs 340"
+          "price": "Rs 340",
+          "img": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=80"
         }
       ]
     },
@@ -54,27 +62,32 @@
         {
           "name": "Slow-cooked lamb karahi",
           "description": "As above. Serves two to three with bread.",
-          "price": "Rs 1,850"
+          "price": "Rs 1,850",
+          "img": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=80"
         },
         {
           "name": "Oak-smoked chicken tikka",
           "description": "Leg or breast, with lemon and charred onion.",
-          "price": "Rs 950"
+          "price": "Rs 950",
+          "img": "https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=900&q=80"
         },
         {
-          "name": "Whole trout from the stream, grilled",
-          "description": "When the fishermen bring it. Ask before you order.",
-          "price": "Market"
+          "name": "Grilled trout from our own fish farm",
+          "description": "Pond to plate the same morning, when the day's catch lasts.",
+          "price": "Market",
+          "img": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80"
         },
         {
           "name": "Chapli kebab with mountain tomato",
           "description": "Two kebabs, naan, and a fried egg if you want one.",
-          "price": "Rs 650"
+          "price": "Rs 650",
+          "img": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80"
         },
         {
           "name": "Campfire daal with ghee tadka",
           "description": "Red lentils, slow all evening.",
-          "price": "Rs 480"
+          "price": "Rs 480",
+          "img": "https://images.unsplash.com/photo-1585937421612-70a00882f4e8?auto=format&fit=crop&w=900&q=80"
         }
       ]
     },
@@ -84,17 +97,20 @@
         {
           "name": "Tandoori roti",
           "description": "Whole wheat, blistered.",
-          "price": "Rs 40"
+          "price": "Rs 40",
+          "img": "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=900&q=80"
         },
         {
           "name": "Naan, plain or garlic",
           "description": "Pulled to order.",
-          "price": "Rs 70 / 120"
+          "price": "Rs 70 / 120",
+          "img": "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=900&q=80"
         },
         {
           "name": "Steamed mountain rice with brown butter",
           "description": "A side for the karahi.",
-          "price": "Rs 380"
+          "price": "Rs 380",
+          "img": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=900&q=80"
         }
       ]
     },
@@ -104,12 +120,14 @@
         {
           "name": "Jaggery kheer, cold from the mud cellar",
           "description": "Set overnight.",
-          "price": "Rs 320"
+          "price": "Rs 320",
+          "img": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80"
         },
         {
           "name": "Fire-roasted sweet potato with salted malai",
           "description": "Eaten with your hands, near the fire.",
-          "price": "Rs 290"
+          "price": "Rs 290",
+          "img": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=900&q=80"
         }
       ]
     },
@@ -119,22 +137,26 @@
         {
           "name": "Kehwa, pot for the table",
           "description": "Green tea, saffron, almond.",
-          "price": "Rs 250"
+          "price": "Rs 250",
+          "img": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=900&q=80"
         },
         {
           "name": "Salt lassi",
           "description": "Thick, from the morning's milk.",
-          "price": "Rs 220"
+          "price": "Rs 220",
+          "img": "https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=900&q=80"
         },
         {
           "name": "Bonfire coffee",
           "description": "Boiled three times in a copper pot, the way the guides drink it.",
-          "price": "Rs 180"
+          "price": "Rs 180",
+          "img": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80"
         },
         {
           "name": "Canned drinks and bottled water",
           "description": "Cold, from the fridge.",
-          "price": "Rs 100 to 150"
+          "price": "Rs 100 to 150",
+          "img": "https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=900&q=80"
         }
       ]
     }

@@ -1,26 +1,32 @@
 {
-  "note": "Package names, prices and inclusions are placeholders. Replace with the real ones.",
+  "note": "Package names, prices, inclusions and photos are placeholders. Replace with the real ones.",
   "packages": [
     {
       "name": "The two-person tent",
       "price": "Rs 4,500",
       "unit": "per night",
       "capacity": "2 guests",
-      "includes": ["Bell tent with real beds", "Bonfire and firewood", "Morning kehwa", "Washroom block, 40 m away"]
+      "includes": ["Bell tent with real beds", "Bonfire and firewood", "Morning kehwa", "Washroom block, 40 m away"],
+      "img": "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=1200&q=80",
+      "alt": "A small tent pitched for the night with a fire burning nearby"
     },
     {
       "name": "The family camp",
       "price": "Rs 8,500",
       "unit": "per night",
       "capacity": "4 to 6 guests",
-      "includes": ["Two connected tents", "Private fire pit and grill grate", "Breakfast included", "Washroom block, 40 m away"]
+      "includes": ["Two connected tents", "Private fire pit and grill grate", "Breakfast included", "Washroom block, 40 m away"],
+      "img": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1200&q=80",
+      "alt": "A roomy tent glowing warmly from the inside at night"
     },
     {
       "name": "Bring your own tent",
       "price": "Rs 1,200",
       "unit": "per person, per night",
       "capacity": "any",
-      "includes": ["Pitch on the meadow", "Fire pit, shared", "Washroom block", "Hot water from 6 am"]
+      "includes": ["Pitch on the meadow", "Fire pit, shared", "Washroom block", "Hot water from 6 am"],
+      "img": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Tall pines along the meadow where guests pitch their own tents"
     }
   ],
   "amenities": [

@@ -40,21 +40,43 @@ Not Inter. Not Roboto. Not Space Grotesk + Instrument Serif. Not the
 
 **The hairline row**: full-width rows divided by `border-t border-ink/15`,
 containing a Fraunces name on the left, optional description below, and a
-price or meta value right-aligned. Used for menu items, camping packages,
-amenities, hours, contact methods, FAQs. One primitive, repeated. Cards,
-icon grids, stat banners, numbered steps, and colored left-borders are
-banned.
+price or meta value right-aligned. Used for menu teasers, amenities,
+contact methods, FAQs. Cards, icon grids, stat banners, numbered steps,
+and colored left-borders are banned.
+
+**Photo variant**: when a row carries photography (full menu page,
+camping packages), the row becomes a two-column grid on a shared
+hairline: photo on the left (`aspect-[4/3]`), name / dotted leader /
+price / description on the right. Every dish and every tent gets a photo.
 
 Sections must vary in structure. Left-align by default; center nothing
 except the mobile menu.
 
-## Motion
+## Titles and labels
 
-Motion (the `motion` package) is used in exactly two places:
-1. hero / page-head elements fading up once on load (staggered),
-2. nothing else. Hover states are CSS transitions.
+- Page heads use literal titles: "Our Menu", "Camping & Tents", "Gallery",
+  "About Us", "Contact Us". No poetic page titles, no kicker/pre-title
+  above them. The home hero tagline is the one exception.
+- Text placed over photos is always bone/bone-80, never ink-soft or clay.
 
-No scroll-reveal-on-everything. No parallax.
+## Buttons (locked)
+
+| Style | Classes | Use |
+|---|---|---|
+| Primary | `bg-clay text-bone px-8 py-4 text-sm font-bold hover:bg-clay-deep` | the one main CTA per section |
+| Secondary (light bg) | `border border-ink/50 text-ink px-8 py-4 hover:bg-ink hover:text-bone` | WhatsApp/phone beside a primary |
+| Secondary (photo/dark bg) | `bg-bone text-ink px-8 py-4 hover:bg-sand` | high-contrast on photos |
+
+Bordered text links are reserved for tertiary "see all" links.
+
+## Interaction
+
+- Motion package: one-shot entrance on heroes/page heads only.
+- Mobile nav: full-screen ink overlay, numbered Fraunces links, contact
+  block at the bottom. No dropdown drawer.
+- Gallery: uniform `grid-cols-2 lg:grid-cols-3` grid (no masonry), every
+  photo opens in a full-screen dark lightbox (Esc / backdrop closes).
+- Hours are rendered as "Open 24 hours, 7 days a week" from `site.json`.
 
 ## Copy rules
 

@@ -33,47 +33,60 @@ const schema = [
 
 <Layout title="Camping" description={description} schema={schema}>
   <PageHead
-    kicker="The campsite"
-    title="A meadow behind the kitchen, and a fire in the middle of it."
-    lede="A handful of tents, one gate, and staff awake all night. Bring warm clothes; we handle the rest."
+    title="Camping &amp; Tents"
+    lede="A handful of tents on the meadow behind the kitchen. One gate, staff awake all night, and a fire in the middle of it."
     image={images.pages.camping}
   />
 
   <section class="container-site py-16 md:py-24">
-    <h2 class="text-sm font-semibold text-clay">Packages</h2>
-    <ul class="mt-5 border-t border-ink/15">
+    <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 pb-3">
+      <h2 class="font-display text-2xl md:text-3xl">Our packages</h2>
+      <span class="text-sm text-ink-soft">{camping.packages.length} ways to stay</span>
+    </div>
+
+    <ul class="border-t-0">
       {camping.packages.map((p) => (
-        <li class="border-b border-ink/15 py-6">
-          <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-            <h3 class="font-display text-2xl">{p.name}</h3>
-            <span class="text-sm text-ink-soft">{p.capacity}</span>
-            <div class="grow border-b border-dotted border-ink/30"></div>
-            <span class="font-display text-xl">{p.price}</span>
-            <span class="text-xs text-ink-soft">{p.unit}</span>
+        <li class="grid gap-6 border-b border-ink/15 py-10 md:grid-cols-12 md:items-center md:gap-10">
+          <img src={p.img} alt={p.alt} class="aspect-[4/3] w-full object-cover md:col-span-5" loading="lazy" />
+          <div class="md:col-span-7">
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+              <h3 class="font-display text-2xl md:text-3xl">{p.name}</h3>
+              <span class="text-sm text-ink-soft">{p.capacity}</span>
+            </div>
+            <p class="mt-2">
+              <span class="font-display text-2xl text-clay">{p.price}</span>
+              <span class="ml-2 text-sm text-ink-soft">{p.unit}</span>
+            </p>
+            <ul class="mt-4 grid gap-x-6 gap-y-1 text-sm text-ink-soft sm:grid-cols-2">
+              {p.includes.map((inc) => <li>{inc}</li>)}
+            </ul>
           </div>
-          <ul class="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-sm text-ink-soft">
-            {p.includes.map((inc) => <li>{inc}</li>)}
-          </ul>
         </li>
       ))}
     </ul>
 
-    <div class="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-ink/15 pt-8">
+    <div class="mt-12 flex flex-wrap items-center gap-x-5 gap-y-4 border-t border-ink/15 pt-10">
       <a
         href={waLink(site.whatsappNumber, "Hi! I would like to book a campsite.")}
-        class="border border-ink bg-ink px-6 py-3 text-sm font-semibold text-bone transition-colors hover:bg-transparent hover:text-ink"
+        class="bg-clay px-8 py-4 text-sm font-bold tracking-wide text-bone transition-colors hover:bg-clay-deep"
       >
-        Message us about camping
+        Book on WhatsApp
       </a>
-      <a href={`tel:${site.phoneHref}`} class="text-sm font-semibold underline decoration-clay decoration-2 underline-offset-4 hover:text-clay">
-        Or call {site.phoneDisplay}
+      <a
+        href={`tel:${site.phoneHref}`}
+        class="border border-ink/50 px-8 py-4 text-sm font-bold tracking-wide text-ink transition-colors hover:bg-ink hover:text-bone"
+      >
+        Call {site.phoneDisplay}
       </a>
     </div>
   </section>
 
   <section class="container-site pb-16 md:pb-24">
-    <h2 class="text-sm font-semibold text-clay">What is here</h2>
-    <ul class="mt-5 grid gap-x-12 border-t border-ink/15 md:grid-cols-2">
+    <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 pb-3">
+      <h2 class="font-display text-2xl md:text-3xl">What is here</h2>
+      <span class="text-sm text-ink-soft">Amenities</span>
+    </div>
+    <ul class="mt-8 grid gap-x-12 border-t border-ink/15 md:grid-cols-2">
       {camping.amenities.map((a) => (
         <li class="border-b border-ink/15 py-4 text-ink-soft">{a}</li>
       ))}
@@ -81,8 +94,10 @@ const schema = [
   </section>
 
   <section class="container-site pb-16 md:pb-24">
-    <h2 class="text-sm font-semibold text-clay">Good to know</h2>
-    <div class="mt-5 border-t border-ink/15">
+    <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 pb-3">
+      <h2 class="font-display text-2xl md:text-3xl">Good to know</h2>
+    </div>
+    <div class="mt-8 border-t border-ink/15">
       {camping.goodToKnow.map((f) => (
         <details class="group border-b border-ink/15">
           <summary class="flex min-h-11 cursor-pointer list-none items-center justify-between gap-6 py-5 text-left font-display text-lg md:text-xl [&::-webkit-details-marker]:hidden">

@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import PageHead from "../components/PageHead.astro";
+import Lightbox from "../components/Lightbox.astro";
 import images from "../data/images.json";
 
 const description = "Photographs of Native: the kitchen, the fire, the meadow and the nights. The place as it actually looks.";
@@ -11,20 +12,32 @@ const photos = images.galleryPage.filter((g) => g.src !== images.pages.camping.s
 
 <Layout title="Gallery" description={description} image={images.galleryPage[0].src}>
   <PageHead
-    kicker="The gallery"
-    title="No wide angles. This is how the place looks."
-    lede="Ten photographs, taken across a season. If you visit and take a better one, send it to us."
+    title="Gallery"
+    lede="The kitchen, the fire, the meadow and the nights. Click any photo to see it full size."
     image={images.pages.camping}
   />
 
   <section class="container-site py-16 md:py-24">
-    <div class="columns-1 gap-6 sm:columns-2 lg:columns-3">
+    <div class="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3">
       {photos.map((img) => (
-        <figure class="mb-6 break-inside-avoid">
-          <img src={img.src} alt={img.alt} class="w-full object-cover" loading="lazy" />
-          <figcaption class="mt-2 text-sm text-ink-soft">{img.caption}</figcaption>
-        </figure>
+        <button
+          type="button"
+          data-lightbox={img.src}
+          data-cap={img.caption}
+          class="group cursor-zoom-in text-left"
+          aria-label={`View larger: ${img.caption}`}
+        >
+          <img
+            src={img.src}
+            alt={img.alt}
+            class="aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            loading="lazy"
+          />
+          <p class="mt-2 text-sm text-ink-soft transition-colors group-hover:text-ink">{img.caption}</p>
+        </button>
       ))}
     </div>
   </section>
+
+  <Lightbox />
 </Layout>
