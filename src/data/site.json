@@ -1,15 +1,15 @@
 {
   "name": "Native Resort & Restaurant",
   "shortName": "Native",
-  "tagline": "A kitchen and a campsite on the edge of the pines.",
-  "phoneDisplay": "+92 300 000 0000",
-  "phoneHref": "+923000000000",
-  "whatsappNumber": "923000000000",
-  "email": "hello@nativerestaurant.example",
-  "address": "Village Road, Hillside, District (replace with real address)",
-  "mapsQuery": "Native Restaurant and Camping, Hillside",
+  "tagline": "A restaurant at the heart of Bumburate.",
+  "phoneDisplay": "+92 345 0004440",
+  "phoneHref": "+923450004440",
+  "whatsappNumber": "923450004440",
+  "email": "native.resort@gmail.com",
+  "address": "Broon Bumburate",
+  "mapsQuery": "Native Restaurant and Resort, Bumburate",
   "hours": [
-    { "days": "Restaurant and campsite", "time": "Open 24 hours, 7 days a week" }
+    { "days": "Restaurant and Resort", "time": "Open 24 hours, 7 days a week" }
   ],
   "socials": {
     "instagram": "",
