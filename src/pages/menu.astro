@@ -26,7 +26,7 @@ const schema = [
 <Layout title="Our Menu" description={description} image={images.pages.menu.src} schema={schema}>
   <PageHead
     title="Our Menu"
-    lede="Cooked over wood fire, from a short list of dishes we know by heart. Prices current as of this month."
+    lede="Cooked to order: karahi from the fire, burgers, pizza and wraps, and doodh patti by the pot."
     image={images.pages.menu}
   />
 
@@ -35,7 +35,7 @@ const schema = [
       <div class="mb-20 last:mb-0">
         <div class="flex items-baseline justify-between gap-6 border-b border-ink/15 pb-3">
           <h2 class="font-display text-2xl md:text-3xl">{cat.name}</h2>
-          <span class="text-sm text-ink-soft">{cat.items.length} dishes</span>
+          <span class="text-sm text-ink-soft">{cat.items.length} {cat.items.length === 1 ? "dish" : "dishes"}</span>
         </div>
 
         <div class="mt-10 grid gap-x-10 gap-y-12 sm:grid-cols-2">
@@ -58,6 +58,26 @@ const schema = [
         </div>
       </div>
     ))}
+
+    <!-- Custom orders card: the kitchen also cooks to order, so point people at the phone -->
+    <div class="mt-20 grid gap-6 bg-ink p-8 text-bone md:grid-cols-12 md:items-center md:gap-10 md:p-12">
+      <div class="md:col-span-8">
+        <h2 class="font-display text-2xl leading-tight md:text-3xl">Custom orders</h2>
+        <p class="mt-3 max-w-xl text-bone/85">
+          Apart from the menu, we cook to order — a bigger karahi for a group, dishes you don't see
+          listed here, food packed for a trip or a family event. Tell us what you have in mind and
+          we'll tell you what it takes.
+        </p>
+      </div>
+      <div class="md:col-span-4 md:justify-self-end">
+        <a
+          href={`tel:${site.phoneHref}`}
+          class="inline-block bg-clay px-7 py-3.5 text-sm font-semibold text-bone transition-colors hover:bg-clay-deep"
+        >
+          Call {site.phoneDisplay}
+        </a>
+      </div>
+    </div>
 
     <div class="mt-16 flex flex-wrap items-center gap-x-5 gap-y-4 border-t border-ink/15 pt-10">
       <a
