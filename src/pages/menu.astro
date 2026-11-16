@@ -26,7 +26,7 @@ const schema = [
 <Layout title="Our Menu" description={description} image={images.pages.menu.src} schema={schema}>
   <PageHead
     title="Our Menu"
-    lede="Cooked to order: karahi from the fire, burgers, pizza and wraps, and doodh patti by the pot."
+    lede="Cooked to order: karahi from the fire, fish from our own ponds, burgers, pizza and wraps, and doodh patti by the pot."
     image={images.pages.menu}
   />
 
@@ -50,7 +50,7 @@ const schema = [
               <div class="mt-4 flex items-baseline gap-3">
                 <h3 class="font-display text-xl md:text-2xl">{item.name}</h3>
                 <div class="grow border-b border-dotted border-ink/30"></div>
-                <span class="font-display text-lg text-clay">{item.price}</span>
+                {item.price && <span class="font-display text-lg text-clay">{item.price}</span>}
               </div>
               <p class="mt-1 max-w-md text-sm text-ink-soft">{item.description}</p>
             </article>

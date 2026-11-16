@@ -1,46 +1,45 @@
 {
-  "note": "Photos are the kitchen's own dishes. Prices are placeholders until the final list is confirmed.",
+  "note": "Photos are the kitchen's own dishes. Prices are deliberately omitted until the final list is confirmed — add a price field back to each item when ready.",
   "signature": [
     {
       "name": "Beef karahi",
       "description": "Slow-cooked on the fire, dark with tomato and finished with shredded ginger, green chilli and coriander. Serves two to three with bread.",
-      "price": "Rs 1,850",
       "img": "/beef-karahi.jpg"
     },
     {
       "name": "Chicken karahi",
       "description": "Cooked on the bone, low and slow, until the gravy clings to the meat. The pot most tables order for dinner.",
-      "price": "Rs 1,500",
       "img": "/chicken-karahi.jpg"
     },
     {
       "name": "Zinger burger",
       "description": "A crispy fried chicken fillet with lettuce and mayo in a soft toasted bun, ketchup on the plate.",
-      "price": "Rs 550",
       "img": "/zinger-burger.jpg"
     },
     {
       "name": "Pizza",
       "description": "Hand-stretched dough with tomato, mozzarella and pepperoni, baked until the edges blister. Basil on top.",
-      "price": "Rs 900",
       "img": "/pizza.jpg"
     }
   ],
   "categories": [
     {
-      "name": "Karahi",
+      "name": "Mains",
       "items": [
         {
           "name": "Beef karahi",
           "description": "Slow-cooked on the fire, dark with tomato and finished with shredded ginger, green chilli and coriander. Serves two to three with bread.",
-          "price": "Rs 1,850",
           "img": "/beef-karahi.jpg"
         },
         {
           "name": "Chicken karahi",
           "description": "Cooked on the bone, low and slow, until the gravy clings to the meat. Serves two to three with bread.",
-          "price": "Rs 1,500",
           "img": "/chicken-karahi.jpg"
+        },
+        {
+          "name": "Fried fish",
+          "description": "Crisp-fried fillets from our own ponds, served with lemon and parsley. Available while the day's catch lasts.",
+          "img": "/fish.jpg"
         }
       ]
     },
@@ -50,25 +49,21 @@
         {
           "name": "Zinger burger",
           "description": "A crispy fried chicken fillet with lettuce and mayo in a soft toasted bun, ketchup on the plate.",
-          "price": "Rs 550",
           "img": "/zinger-burger.jpg"
         },
         {
           "name": "Pizza",
           "description": "Hand-stretched dough with tomato, mozzarella and pepperoni, baked until the edges blister. Basil on top.",
-          "price": "Rs 900",
           "img": "/pizza.jpg"
         },
         {
           "name": "Shawarma",
           "description": "Grilled chicken rolled in soft flatbread with cabbage and a side of ketchup, cut in half to share.",
-          "price": "Rs 350",
           "img": "/shawarma.jpg"
         },
         {
           "name": "French fries",
           "description": "Golden and crisp, served with ketchup. Good beside everything.",
-          "price": "Rs 250",
           "img": "/french-fries.jpg"
         }
       ]
@@ -79,7 +74,6 @@
         {
           "name": "Doodh patti",
           "description": "Boiled slow with fresh milk until it turns caramel, poured steaming in two small cups. The way every gathering here starts.",
-          "price": "Rs 120",
           "img": "/tea.jpg"
         }
       ]
