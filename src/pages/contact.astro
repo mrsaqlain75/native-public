@@ -4,6 +4,7 @@ import PageHead from "../components/PageHead.astro";
 import FaqSection from "../components/FaqSection.astro";
 import site from "../data/site.json";
 import faqs from "../data/faqs.json";
+import images from "../data/images.json";
 import { waLink } from "../lib/links";
 
 const description = "Find Native: phone, WhatsApp, email, opening hours, directions and a map. WhatsApp gets the fastest reply during opening hours.";
@@ -58,6 +59,7 @@ const methods = [
   <PageHead
     title="Contact Us"
     lede="Reservations, camping bookings, events and directions to the gate. Open 24 hours, 7 days a week."
+    image={images.pages.about}
   />
 
   <section class="container-site py-16 md:py-24">
