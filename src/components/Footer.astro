@@ -6,7 +6,6 @@ import LogoMark from "./LogoMark.astro";
 const year = new Date().getFullYear();
 const nav = [
   { href: "/menu/", label: "Menu" },
-  { href: "/camping/", label: "Camping" },
   { href: "/gallery/", label: "Gallery" },
   { href: "/about/", label: "About" },
   { href: "/contact/", label: "Contact" },
@@ -19,8 +18,17 @@ const contactRows = [
 ];
 ---
 
-<footer class="bg-ink text-bone">
-  <div class="container-site py-16 md:py-24">
+<footer class="relative overflow-hidden bg-ink text-bone">
+  <!-- Natural footer texture: a pine-ridge horizon along the bottom edge.
+       Deliberately faint (6%), contextual (the resort sits in the hills),
+       and not a gradient. -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 bottom-0">
+    <svg viewBox="0 0 1440 160" preserveAspectRatio="none" class="h-28 w-full text-bone opacity-[0.06] md:h-40" fill="currentColor">
+      <path d="M0,160 L0,120 L60,70 L90,105 L120,55 L150,100 L180,80 L240,110 L300,60 L330,95 L360,45 L390,98 L420,75 L480,105 L540,65 L570,100 L600,50 L630,96 L660,80 L720,110 L780,70 L810,102 L840,48 L870,100 L900,82 L960,108 L1020,62 L1050,96 L1080,44 L1110,98 L1140,78 L1200,106 L1260,72 L1290,102 L1320,52 L1350,98 L1380,80 L1440,115 L1440,160 Z" />
+    </svg>
+  </div>
+
+  <div class="container-site relative py-16 md:py-24">
     <div class="grid gap-12 md:grid-cols-12 md:gap-10">
       <!-- Brand -->
       <div class="md:col-span-5">
@@ -34,6 +42,7 @@ const contactRows = [
         <p class="mt-5 max-w-sm text-sm leading-relaxed text-bone/70">{site.tagline}</p>
         <p class="mt-4 max-w-sm text-sm text-bone/70">{site.address}</p>
         <p class="mt-4 font-display text-lg text-clay">Open 24 hours, 7 days a week</p>
+        <p class="mt-2 text-sm text-bone/60">Seasonal camping on the meadow, too. Ask us on WhatsApp.</p>
       </div>
 
       <!-- Explore -->

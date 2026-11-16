@@ -18,7 +18,7 @@ All user-visible text lives in `src/data/*.json`:
 |---|---|
 | `site.json` | Name, phone, WhatsApp, email, address, hours, socials |
 | `menu.json` | Signature dishes and full menu by category |
-| `camping.json` | Packages, amenities, practical details |
+| `camping.json` | Packages, amenities, practical details (camping page is paused; data kept for relaunch) |
 | `images.json` | Every photo URL and alt text |
 | `faqs.json` | Per-page FAQ entries |
 

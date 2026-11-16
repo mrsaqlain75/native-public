@@ -54,29 +54,40 @@ except the mobile menu.
 
 ## Titles and labels
 
-- Page heads use literal titles: "Our Menu", "Camping & Tents", "Gallery",
+- Page heads use literal titles: "Our Menu", "Gallery",
   "About Us", "Contact Us". No poetic page titles, no kicker/pre-title
   above them. The home hero tagline is the one exception.
 - Text placed over photos is always bone/bone-80, never ink-soft or clay.
+- The camping service is paused: there is no /camping/ page. Camping is
+  mentioned as an offer on the home band, in the footer, and in contact
+  copy; bookings route to WhatsApp only. `camping.json` is kept for a
+  future relaunch.
 
 ## Buttons (locked)
 
 | Style | Classes | Use |
 |---|---|---|
-| Primary | `bg-clay text-bone px-8 py-4 text-sm font-bold hover:bg-clay-deep` | the one main CTA per section |
-| Secondary (light bg) | `border border-ink/50 text-ink px-8 py-4 hover:bg-ink hover:text-bone` | WhatsApp/phone beside a primary |
-| Secondary (photo/dark bg) | `bg-bone text-ink px-8 py-4 hover:bg-sand` | high-contrast on photos |
+| Primary | `bg-clay text-bone px-7 py-3.5 text-sm font-semibold hover:bg-clay-deep` | the one main CTA per section |
+| Ghost on light bg | `border border-ink/30 text-ink px-7 py-3.5 hover:bg-ink hover:text-bone` | secondary beside a primary |
+| Ghost on photo/dark bg | `border border-bone/50 text-bone px-7 py-3.5 hover:bg-bone hover:text-ink` | secondary beside a primary |
+
+No `font-bold`, no `tracking-wide` on buttons; that reads cheap. Nav
+active state is inherited text color with a `border-b-2 border-clay`
+underline, never colored text.
 
 Bordered text links are reserved for tertiary "see all" links.
 
 ## Interaction
 
 - Motion package: one-shot entrance on heroes/page heads only.
-- Mobile nav: full-screen ink overlay, numbered Fraunces links, contact
-  block at the bottom. No dropdown drawer.
+- Mobile nav: full-screen ink overlay, Fraunces links led by a short clay
+  dash (grows on hover), contact block at the bottom. No dropdown drawer.
+  The toggle button stays above the overlay (`relative z-50`).
 - Gallery: uniform `grid-cols-2 lg:grid-cols-3` grid (no masonry), every
   photo opens in a full-screen dark lightbox (Esc / backdrop closes).
 - Hours are rendered as "Open 24 hours, 7 days a week" from `site.json`.
+- Footer: pine-ridge silhouette at 6% opacity along the bottom edge
+  (contextual, not a gradient, not decoration for its own sake).
 
 ## Copy rules
 

@@ -5,7 +5,6 @@ import LogoMark from "./LogoMark.astro";
 const links = [
   { href: "/", label: "Home" },
   { href: "/menu/", label: "Menu" },
-  { href: "/camping/", label: "Camping" },
   { href: "/gallery/", label: "Gallery" },
   { href: "/about/", label: "About" },
   { href: "/contact/", label: "Contact" },
@@ -31,8 +30,8 @@ const isActive = (href: string) =>
           href={l.href}
           aria-current={isActive(l.href) ? "page" : undefined}
           class:list={[
-            "border-b border-transparent py-1 transition-colors hover:border-current",
-            isActive(l.href) ? "border-clay text-clay" : "",
+            "border-b-2 border-transparent py-1 transition-colors hover:border-current",
+            isActive(l.href) ? "border-clay font-semibold" : "",
           ]}
         >
           {l.label}
@@ -48,7 +47,7 @@ const isActive = (href: string) =>
 
     <button
       id="menu-toggle"
-      class="flex h-11 w-11 items-center justify-center md:hidden"
+      class="relative z-50 flex h-11 w-11 items-center justify-center md:hidden"
       aria-expanded="false"
       aria-controls="mobile-menu"
       aria-label="Open menu"
@@ -68,18 +67,23 @@ const isActive = (href: string) =>
   >
     <nav class="container-site flex grow flex-col pt-24" aria-label="Mobile">
       <ul>
-        {links.map((l, i) => (
-          <li>
+        {links.map((l) => (
+          <li class="group">
             <a
               href={l.href}
               aria-current={isActive(l.href) ? "page" : undefined}
               class:list={[
-                "flex items-baseline gap-4 border-b border-bone/10 py-4",
-                isActive(l.href) ? "text-clay" : "",
+                "flex items-center gap-5 border-b border-bone/10 py-4",
+                isActive(l.href) ? "" : "text-bone/80",
               ]}
             >
-              <span class="font-body text-xs font-semibold text-clay">{String(i + 1).padStart(2, "0")}</span>
-              <span class="font-display text-3xl">{l.label}</span>
+              <span
+                class:list={[
+                  "h-px w-6 shrink-0 transition-all duration-300 group-hover:w-10",
+                  isActive(l.href) ? "bg-clay" : "bg-bone/40 group-hover:bg-clay",
+                ]}
+                aria-hidden="true"></span>
+              <span class="font-display text-3xl transition-colors group-hover:text-bone">{l.label}</span>
             </a>
           </li>
         ))}
