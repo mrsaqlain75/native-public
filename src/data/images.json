@@ -1,5 +1,5 @@
 {
-  "note": "All photos below are Unsplash placeholders chosen to match the sections they appear on. Replace the URLs with the business's real photography when available; keep the alt text honest.",
+  "note": "All photos on the site are the business's own. Keep the alt text honest as new photography is added.",
   "home": {
     "hero": {
       "src": "/hero.png",
@@ -38,36 +38,30 @@
   },
   "galleryStrip": [
     {
-      "src": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1200&q=80",
-      "alt": "A bright bowl of vegetables and grains",
+      "src": "/menu.png",
+      "alt": "Guests at the long wooden table in the dining room",
       "aspect": "aspect-[4/5]"
     },
     {
-      "src": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1200&q=80",
-      "alt": "A fish dish plated with herbs",
+      "src": "/about-2.png",
+      "alt": "The green lawn beside the cabin, with the mountain rising behind it",
       "aspect": "aspect-square"
     },
     {
-      "src": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80",
-      "alt": "A cup of coffee on a wooden table",
+      "src": "/hero.png",
+      "alt": "Tents pitched on the lawn in front of the wooden restaurant",
       "aspect": "aspect-[4/5]"
     },
     {
-      "src": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80",
-      "alt": "Two canoes resting on a still lake",
+      "src": "/about-1.png",
+      "alt": "The wooden dining building in summer, with flower beds along the path",
       "aspect": "aspect-square"
     }
   ],
   "galleryPage": [
-    { "src": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1600&q=80", "alt": "A tent glowing from the inside at night", "caption": "The meadow, past midnight" },
-    { "src": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80", "alt": "A plated dish being finished", "caption": "Pass, just before service" },
-    { "src": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80", "alt": "A table of shared dishes", "caption": "A full table, as it should be" },
-    { "src": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80", "alt": "A path through pines", "caption": "The walk down to the stream" },
-    { "src": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1600&q=80", "alt": "Skewers over coals", "caption": "The grill, an hour before dinner" },
-    { "src": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80", "alt": "A valley in morning mist", "caption": "What you wake up to" },
-    { "src": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1600&q=80", "alt": "A bright bowl of vegetables", "caption": "From the noon kitchen" },
-    { "src": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1600&q=80", "alt": "A fish dish with herbs", "caption": "Trout night" },
-    { "src": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=80", "alt": "Coffee on a wooden table", "caption": "Bonfire coffee, six in the morning" },
-    { "src": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1600&q=80", "alt": "Canoes on a still lake", "caption": "The lake, twenty minutes down" }
+    { "src": "/about-1.png", "alt": "The wooden dining building in summer, with flower beds along the path", "caption": "The building, in summer" },
+    { "src": "/hero.png", "alt": "Tents pitched on the lawn in front of the wooden restaurant, under the mountain", "caption": "Tents on the lawn, the kitchen behind" },
+    { "src": "/about-2.png", "alt": "The green lawn beside the cabin, with the mountain rising behind it", "caption": "The lawn and the mountain" },
+    { "src": "/menu.png", "alt": "Guests at the long wooden table in the dining room", "caption": "Dinner in the wooden room" }
   ]
 }
